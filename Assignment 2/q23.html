@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slideshow</title>
+  <style>
+    #image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 300px;
+    }
+    #image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="image-container">
+    <img id="image" src="https://buffer.com/library/content/images/2023/10/free-images.jpg" alt="Image 1">
+  </div>
+  <div class="buttons">
+    <button id="previous-btn">Previous</button>
+    <button id="next-btn">Next</button>
+  </div>
+  <script>
+    const images = ["https://rare-gallery.com/thumbs/5408546-woman-female-girl-photographer-camera-beanie-pine-holding-hand-jean-jacket-red-film-caucasian-blonde-photography-nature-exterior-hat-vintage-contax-creative-commons-images.jpg", "https://c8.alamy.com/comp/KWDTCW/rajwada-is-a-historical-palace-in-indore-city-india-KWDTCW.jpg", "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg"]; 
+    let currentIndex = 0;
+    const imageElement = document.getElementById("image");
+    const previousButton = document.getElementById("previous-btn");
+    const nextButton = document.getElementById("next-btn");
+    function displayImage() {
+      imageElement.src = images[currentIndex];
+    }
+    previousButton.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      displayImage();
+    });
+    nextButton.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      displayImage();
+    });
+    displayImage(); 
+  </script>
+</body>
+</html>

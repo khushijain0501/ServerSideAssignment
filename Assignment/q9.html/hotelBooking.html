@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0 ;
+    }
+
+    header {
+      background-color: #f0f0f0;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+    h1 {
+      color: #333;
+      font-size: 2em;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #ddd;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    nav a:hover {
+      color: #333;
+      font-weight: bold;
+    }
+    .logo{
+        width: 7%;
+    }
+
+    fieldset {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin: 20px;
+      margin-bottom: 20px;
+      
+    }
+
+    legend {
+      font-weight: bold;
+      padding: 5px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 7px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    input[type="date"] {
+      width: calc(100% - 30px);
+      padding: 10px 15px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3e8e41;
+    }
+    .footerImg{
+        width: 100%;
+        height: 150px;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <img src="images/gate-of-india.png" alt="{city_name} City Logo" class="logo">
+        <h1>Mumbai Tourism</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="heritage.html">Heritage</a></li>
+          <li><a href="hotelBooking.html">Hotel Booking</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <div>
+  <h1>Book Your Stay</h1>
+  <form action="booking_confirmation.html" method="post">
+    <fieldset>
+      <legend>Guest Information</legend>
+      <label for="first_name">First Name:</label>
+      <input type="text" id="first_name" name="first_name" required><br>
+
+      <label for="last_name">Last Name:</label>
+      <input type="text" id="last_name" name="last_name" required><br>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Reservation Details</legend>
+      <label for="hotel">Select Hotel:</label>
+      <select name="hotel" id="hotel" required>
+        <option value="">-- Choose Hotel --</option>
+        <option value="hotel_1">Hotel Paradise (5 Star)</option>
+        <option value="hotel_2">Cozy Comfort Inn (3 Star)</option>
+        <option value="hotel_3">Ocean View Beach Resort (4 Star)</option>
+      </select><br>
+
+      <label for="check_in">Check-In Date:</label>
+      <input type="date" id="check_in" name="check_in" required><br>
+
+      <label for="check_out">Check-Out Date:</label>
+      <input type="date" id="check_out" name="check_out" required><br>
+
+      <label for="guests">Number of Guests:</label>
+      <select name="guests" id="guests" required>
+        <option value="">-- Select Guests --</option>
+        <option value="1">1 Guest</option>
+        <option value="2">2 Guests</option>
+        <option value="3">3 Guests</option>
+        <option value="4">4 Guests</option>
+      </select><br>
+
+      <label for="room_type">Room Type:</label>
+      <select name="room_type" id="room_type" required>
+        <option value="">-- Choose Room --</option>
+        <option value="standard">Standard Room</option>
+        <option value="deluxe">Deluxe Room</option>
+        <option value="suite">Suite</option>
+      </select><br>
+    </fieldset>
+    <div style="display: flex;justify-content: center;">
+    <button type="submit">Book Now</button>
+</div>
+  </form>
+</div>
+<footer>
+    <img src="images/360_F_246530734_hMlR4WH6yTzi8PXR0AbsMTcg48G5nLDK.jpg" class="footerImg">
+</footer>
+</body>
+</html>

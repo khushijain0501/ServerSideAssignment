@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0 ;
+    }
+
+    header {
+      background-color: #f0f0f0;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+    h1 {
+      color: #333;
+      font-size: 2em;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #ddd;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    nav a:hover {
+      color: #333;
+      font-weight: bold;
+    }
+    .logo{
+        width: 7%;
+    }
+    .city-description {
+      padding: 20px 60px;
+      text-align:center;
+      line-height: 25px;
+      font-size: 20px;
+    }
+    .carousel {
+      margin: 0px;
+      margin-bottom: 20px;
+      width: 100%; /* Adjust width as needed */
+      overflow: hidden;
+      white-space: nowrap; /* Prevent text wrapping */
+    }
+
+    .carousel img {
+      width: 30%; /* Adjust image width as needed */
+      display: inline-block;
+      margin-right: 2%;
+      animation: slide 10s infinite linear;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    .footerImg{
+        width: 100%;
+        height: 150px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/gate-of-india.png" alt="{city_name} City Logo" class="logo">
+    <h1>Mumbai Tourism</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="heritage.html">Heritage</a></li>
+      <li><a href="hotelBooking.html">Hotel Booking</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+  <div>
+  <div class="city-description">
+    <p>Mumbai, also known as Bombay, is the financial and commercial capital of India. It's a vibrant metropolis known for its iconic landmarks like the Gateway of India, historical museums, and Bollywood, the world's largest film industry. The city offers a unique blend of ancient traditions and modern life, with bustling bazaars, delicious street food, and stunning coastal views.</p>
+  </div>
+  <p style="font-size: 20px; margin-left: 10px;color: #333;font-size: 1.5rem;font-weight: bold;">Places to visit</p>
+  <div class="carousel">
+    <img src="images/gateway1.jpg" alt="Gateway of India">
+    <img src="images/chhatrapati1.jpg" alt="Chhatrapati Shivaji Terminus">
+    <img src="images/elephanta1.jpeg" alt="Elephanta Caves">
+    <img src="images/marine1.jpg" alt="Marine Drive">
+    <img src="images/taj1.jpg">
+    </div>
+</div>
+    <footer>
+        <img src="images/360_F_246530734_hMlR4WH6yTzi8PXR0AbsMTcg48G5nLDK.jpg" class="footerImg">
+    </footer>
+  </body>
+</html>
